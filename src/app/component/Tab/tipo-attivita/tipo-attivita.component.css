@@ -1,0 +1,61 @@
+.line {
+  border-bottom: 1px #b71c1c solid;
+  width: unset;
+  height: 10px;
+}
+
+.mat-form-field-wrapper {
+  margin-top: 40px;
+}
+.default-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mat-table {
+  width: 100%;
+  margin-top: 20px;
+  border-top: 1px solid #b71c1c;
+}
+
+.mat-cell {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.mat-header-cell {
+  font-size: large;
+  color: white;
+  border-bottom: 1px solid #b71c1c;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  font-weight: 600;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: #b71c1c;
+  color: white;
+}
+.mat-icon.mat-primary {
+  color: #b71c1c;
+}
+
+tr.mat-header-row {
+  background-color: #b71c1c !important;
+}
+
+mat-label {
+  color: grey;
+}
+
+body {
+  font-family: "Titillium Web";
+}

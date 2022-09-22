@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>{{ isEdit ? "Modifica " + data.p.codice :  "Aggiungi una Contesti "}}  </h1>
+
+<form class="container" [formGroup]="buForm">
+  <mat-form-field appearance="outline" class="col-12" style="width: 100%">
+    <mat-label>Codice</mat-label>
+    <div>
+      <input matInput type="text" formControlName="codice" />
+    </div>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="col-12" style="width: 100%">
+    <mat-label>Descrizione</mat-label>
+    <div>
+      <input matInput type="text" formControlName="description" />
+    </div>
+  </mat-form-field>
+
+  <div mat-dialog-actions align="end">
+    <button
+      mat-raised-button
+      type="button"
+      (click)="onCloseClick()"
+    >
+      Cancel
+    </button>
+
+    <button
+      mat-raised-button
+      type="submit"
+        (click)="onSaveClick()"
+    >
+      Salva
+    </button>
+
+  </div>
+</form>

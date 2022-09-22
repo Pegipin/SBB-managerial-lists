@@ -1,0 +1,19 @@
+.mat-dialog-title {
+  margin: 0 0 20px;
+  display: block;
+  border-style: solid;
+  background-color: #b71c1c;
+  color: white;
+}
+
+.mat-fab,
+.mat-flat-button,
+.mat-mini-fab,
+.mat-raised-button {
+  color: white;
+  background-color: #b71c1c;
+}
+
+mat-label {
+  color: grey;
+}

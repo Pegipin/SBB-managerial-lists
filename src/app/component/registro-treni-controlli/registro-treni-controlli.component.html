@@ -1,0 +1,80 @@
+<div class="row no-gutters    border">
+
+  <div class="col-md-12">
+    <mat-toolbar class="margin-activation " >
+      <span > Backoffice Registro Treni- Controlli</span>
+    </mat-toolbar>
+    <div class="line"></div>
+
+    <mat-tab-group [(selectedIndex)]="selectedIndex" animationDuration="100ms">
+      <div >
+        <div class="container-btn ">
+          <mat-tab label="  Tipo Attività  ">
+            <ng-template matTabContent>
+              <app-tipo-attivita></app-tipo-attivita>
+            </ng-template>
+          </mat-tab>
+        </div>
+
+        <div class="container-btn ">
+          <mat-tab label="Etichette">
+            <ng-template matTabContent>
+              <app-etichette></app-etichette>
+            </ng-template>
+          </mat-tab>
+        </div>
+
+        <div class="container-btn">
+          <mat-tab label="Anormalita CUU">
+            <ng-template matTabContent>
+              <app-anormalita></app-anormalita>
+            </ng-template>
+          </mat-tab>
+        </div>
+
+        <div class="container-btn ">
+          <mat-tab label="Provvedimenti">
+            <ng-template matTabContent>
+              <app-provvedimenti></app-provvedimenti>
+            </ng-template>
+          </mat-tab>
+        </div>
+
+        <div class="container-btn ">
+          <mat-tab label="IF Serive">
+            <ng-template matTabContent>
+              <app-ifservice></app-ifservice>
+            </ng-template>
+          </mat-tab>
+          >
+        </div>
+      </div>
+      <div >
+        <div class="container-btn ">
+          <mat-tab label="Contesti Operativi">
+            <ng-template matTabContent>
+              <app-contesti></app-contesti>
+            </ng-template>
+          </mat-tab>
+        </div>
+
+        <div class="container-btn ">
+          <mat-tab label="Tipologia UTI">
+            <ng-template matTabContent>
+              <app-tipologia></app-tipologia>
+            </ng-template>
+          </mat-tab>
+
+        </div>
+        <div class="container-btn ">
+          <mat-tab label="Località di Servizio">
+            <ng-template matTabContent>
+              <app-localita></app-localita>
+            </ng-template>
+          </mat-tab>
+        </div>
+      </div>
+    </mat-tab-group>
+
+     </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="default-cont">
+
+  <mat-form-field appearance="outline">
+    <mat-label style="font-size: large"
+      > Cerca
+    </mat-label>
+    <mat-icon matPrefix style="font-size: x-large" color="primary">search</mat-icon>
+
+    <input
+      matInput
+      matInput
+      [(ngModel)]="filteredSearch"
+      (ngModelChange)="onSearching()"
+    />
+  </mat-form-field>
+
+  <div>
+    <button
+     color="primary"
+      type="button"
+      mat-raised-button
+       (click)="onClickAddAnormalita()"
+    >
+      <mat-icon>add</mat-icon>
+      Add
+    </button>
+  </div>
+  
+</div>
+<div class="row no-gutters ">
+  <div class="col-md-12">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="codice">
+        <th mat-header-cell *matHeaderCellDef>Codice</th>
+
+        <td mat-cell *matCellDef="let element">
+          {{ element.codice }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Descrizione</th>
+
+        <td mat-cell *matCellDef="let element">
+          {{ element.description }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="classe">
+        <th mat-header-cell *matHeaderCellDef>Classe</th>
+
+        <td mat-cell *matCellDef="let element">
+          {{ element.classe }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button
+          color="primary"
+            mat-mini-fab
+                 type="button"
+            matTooltip="Delete"
+            (click)="onDelete(element)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td></ng-container
+      >
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button
+           color="primary"
+            mat-mini-fab
+            type="button"
+            matTooltip="Edit
+      "
+            (click)="onClickEditAnormalita(element)"
+          >
+
+            <mat-icon >edit</mat-icon>
+
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
+<!-- </div> -->
+
